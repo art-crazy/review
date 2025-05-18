@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "types": ["node", "vite/client"],
+    "moduleResolution": "node",
+    "skipLibCheck": true, // Пропускать проверку типов в node_modules
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "declaration": true,        // Генерировать .d.ts файлы
+    "emitDeclarationOnly": true, // Только декларации, без JS
+    "outDir": "dist/types",     // Папка для типов
+    "rootDir": "src",           // Исходная папка
+    "module": "ES2020",
+    "target": "ES2020",
+    "strict": true,
+ },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
