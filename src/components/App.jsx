@@ -1,9 +1,9 @@
-import { useCallback, useState } from "react";
+import {useCallback, useState} from "react";
 
-import { Key } from "./Key";
-import { Button } from "./Button";
+import {Key} from "./Key";
+import {Button} from "./Button";
 
-import { Api } from "../utils/Api";
+import {Api} from "../utils/Api";
 
 /*
   Легенда:
@@ -29,7 +29,8 @@ export const App = () => {
         setCountUsedKeys((prevValue) => prevValue++);
     }
 
-    const decrementUsedKeys = useCallback(() => {    setCountUsedKeys((prevValue) => prevValue--);
+    const decrementUsedKeys = useCallback(() => {
+        setCountUsedKeys((prevValue) => prevValue--);
     }, []);
 
     const addKey = useCallback(async () => {
@@ -71,10 +72,10 @@ export const App = () => {
             {keys.length && (
                 <div className="keys">
                     {keys.map((key) => (
-                        <Key              value={key}
-                                          removeKey={removeKey(key)}
-                                          decrementUsedKeys={decrementUsedKeys}
-                                          incrementUsedKeys={incrementUsedKeys}
+                        <Key value={key}
+                             removeKey={removeKey(key)}
+                             decrementUsedKeys={decrementUsedKeys}
+                             incrementUsedKeys={incrementUsedKeys}
                         />
                     ))}
                 </div>

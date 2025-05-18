@@ -1,6 +1,6 @@
-import { useCallback, useState, useEffect, useMemo } from "react";
-import { Api } from "../utils/Api";
-import { Button } from "./Button";
+import {useCallback, useEffect, useMemo, useState} from "react";
+import {Api} from "../utils/Api";
+import {Button} from "./Button";
 
 import cn from "classnames";
 
@@ -32,14 +32,15 @@ export const Key = ({
     );
 
     useEffect(async () => {
-        return async () => {      if (!isUsed) return;
+        return async () => {
+            if (!isUsed) return;
 
             decrementUsedKeys();
             await Api.removeUsedKey(value);
         };
     }, [decrementUsedKeys, isUsed, value]);
 
-    const valueClassNames = useMemo(    () => cn(["key__value", isUsed && "key__value_used"]),
+    const valueClassNames = useMemo(() => cn(["key__value", isUsed && "key__value_used"]),
         [isUsed]
     );
 

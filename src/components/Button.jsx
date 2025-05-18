@@ -1,7 +1,8 @@
 import cn from "classnames";
-import { useMemo } from "react";
+import {useMemo} from "react";
 
-export const Button = ({  size,
+export const Button = ({
+                           size,
                            label,
                            color,
                            onClick,
